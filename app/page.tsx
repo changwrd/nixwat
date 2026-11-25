@@ -23,7 +23,7 @@ export default function Home() {
             WIN BIG.
           </span>{" "}
           <br />
-          NO MERCY.
+          OWN THE ARENA.
         </h1>
 
         {/* Subheadline */}
