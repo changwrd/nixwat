@@ -1,26 +1,57 @@
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap");
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* --- NIXWAT BRAND COLORS --- */
+
+  /* Backgrounds */
+  --color-nix-void: #0a0a0b; /* Main background */
+  --color-nix-carbon: #121214; /* Card and container background */
+  --color-nix-border: #2a2a30; /* Subtle borders */
+
+  /* Brand Accents */
+  --color-nix-cyan: #00f0ff; /* Primary (Buy/Long/CTAs) */
+  --color-nix-magenta: #ff0055; /* Secondary (Sell/Short/Alerts) */
+
+  /* Text */
+  --color-nix-text: #ffffff; /* Primary text */
+  --color-nix-muted: #8a8a93; /* Secondary text */
+
+  /* --- FONTS --- */
+  /* --font-display: "Clash Display", sans-serif;
+  --font-mono: "JetBrains Mono", monospace; */
+
+  /* --- FONTS --- */
+  --font-display: "Clash Display", sans-serif;
+  --font-mono: var(--font-jetbrains), monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Base styles for the app */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-nix-void);
+  color: var(--color-nix-text);
+  font-family: var(--font-mono);
+}
+
+/* Override Solana Wallet Adapter Default Styles */
+.nixwat-wallet-btn .wallet-adapter-button {
+  background-color: var(--color-nix-cyan) !important;
+  color: var(--color-nix-void) !important;
+  font-family: var(--font-mono) !important;
+  font-weight: 700 !important;
+  font-size: 0.875rem !important;
+  height: 42px !important;
+  padding: 0 24px !important;
+  border-radius: 4px !important;
+  transition: all 0.2s ease !important;
+}
+
+.nixwat-wallet-btn .wallet-adapter-button:hover {
+  background-color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+.nixwat-wallet-btn .wallet-adapter-button-start-icon {
+  width: 20px !important;
+  height: 20px !important;
 }
