@@ -260,4 +260,4 @@ MIT. See [`LICENSE`](LICENSE).
 
 [![Watch the demo](https://img.youtube.com/vi/TX_dsoHEFao/hqdefault.jpg)](https://youtu.be/TX_dsoHEFao)
 
-_(Nixwat is a 60-second, real-time trading duel on Solana. Two players stake SOL, MagicBlock's VRF selects a random asset, and they battle to achieve the highest P&L. Winner takes the pot. .)_
+_(Nixwat is a 60-second, real-time trading duel on Solana. Two players stake SOL, MagicBlock's VRF selects a random asset, and they battle to achieve the highest P&L. Winner takes the pot.)_
