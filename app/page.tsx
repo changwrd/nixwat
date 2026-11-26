@@ -482,11 +482,11 @@ export default function Home() {
             Join the Nixwat Army
           </h2>
           <p className="text-nix-muted font-mono mb-8 max-w-xl mx-auto relative z-10">
-            Over 5,000 traders are already on the waitlist. Join our community
-            to get alpha, participate in beta tests, and win exclusive NFTs.
+            Traders are already on the waitlist. Join our community to get
+            alpha, participate in beta tests, and win exclusive NFTs.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4 relative z-10">
+          {/* <div className="flex flex-wrap justify-center gap-4 relative z-10">
             <a
               href="#"
               className="flex items-center gap-2 bg-nix-void border border-nix-border hover:border-nix-cyan text-nix-text px-6 py-3 rounded-lg font-mono text-sm transition-colors"
@@ -505,7 +505,7 @@ export default function Home() {
               </svg>
               Join Discord
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -523,7 +523,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {/* Phase 1 */}
           <div className="bg-nix-carbon border border-nix-cyan p-6 rounded-xl relative">
-            <span className="text-xs font-mono text-nix-cyan bg-nix-cyan/10 px-2 py-1 rounded absolute -top-3 left-6">
+            <span className="text-xs font-mono text-nix-cyan bg-nix-cyan/10 px-2 py-1 rounded absolute -top-0 left-6">
               CURRENT
             </span>
             <h3 className="font-display text-xl font-bold text-nix-text mt-2 mb-2">
@@ -614,11 +614,14 @@ export default function Home() {
 
           {/* Links */}
           <div className="flex gap-6 font-mono text-sm text-nix-muted">
-            <a href="#" className="hover:text-nix-cyan transition-colors">
-              Twitter / X
+            <a href="/arena" className="hover:text-nix-cyan transition-colors">
+              Arena
             </a>
-            <a href="#" className="hover:text-nix-cyan transition-colors">
-              Discord
+            <a
+              href="/leaderboard"
+              className="hover:text-nix-cyan transition-colors"
+            >
+              Leaderboard
             </a>
             <a href="#" className="hover:text-nix-cyan transition-colors">
               Docs

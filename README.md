@@ -6,7 +6,7 @@
 
 A real-time 1v1 trading duel on Solana. Stake SOL, get a VRF-selected asset, and out-trade your opponent over 60 seconds. Winner takes the pot.
 
-[**🎮 Live Demo**](https://nixwat.vercel.app) · [**🎥 Demo Video**](https://youtube.com/placeholder) · [**📐 Architecture**](#architecture) · [**🗺 Roadmap**](#roadmap)
+[**🎮 Live Demo**](https://nixwat.vercel.app) · [**🎥 Demo Video**](https://youtu.be/TX_dsoHEFao?si=u466ZoPq1YRSD5Kv) · [**📐 Architecture**](#architecture) · [**🗺 Roadmap**](#roadmap)
 
 ![Solana Devnet](https://img.shields.io/badge/Solana-devnet-9945FF?logo=solana&logoColor=white)
 ![MagicBlock](https://img.shields.io/badge/MagicBlock-ER%20%7C%20Private%20ER%20%7C%20VRF-00F0FF)
@@ -58,19 +58,17 @@ On-chain trading is slow, costly and boring to watch. A price can move 5% before
 
 ## Screenshots
 
-|                                  Landing                                  |                             Arena & matchmaking                              |
-| :-----------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
-| <img src="docs/screenshots/landing.png" alt="Landing page" width="440" /> | <img src="docs/screenshots/arena.png" alt="Arena matchmaking" width="440" /> |
+|                                Dashboard                                 |                             Arena & matchmaking                              |
+| :----------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
+| <img src="docs/screenshots/dashboard.png" alt="Dashboard" width="440" /> | <img src="docs/screenshots/arena.png" alt="Arena matchmaking" width="440" /> |
 
-|                             VRF asset selection                              |                           Live duel terminal                            |
-| :--------------------------------------------------------------------------: | :---------------------------------------------------------------------: |
-| <img src="docs/screenshots/vrf.png" alt="VRF asset selection" width="440" /> | <img src="docs/screenshots/duel.png" alt="Duel terminal" width="440" /> |
+|                           Live duel terminal                            |                           Victory / settlement                            |
+| :---------------------------------------------------------------------: | :-----------------------------------------------------------------------: |
+| <img src="docs/screenshots/duel.png" alt="Duel terminal" width="440" /> | <img src="docs/screenshots/result.png" alt="Result screen" width="440" /> |
 
-|                           Victory / settlement                            |                                 Leaderboard                                  |
-| :-----------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
-| <img src="docs/screenshots/result.png" alt="Result screen" width="440" /> | <img src="docs/screenshots/leaderboard.png" alt="Leaderboard" width="440" /> |
-
----
+|                                 Leaderboard                                  |     |
+| :--------------------------------------------------------------------------: | :-: |
+| <img src="docs/screenshots/leaderboard.png" alt="Leaderboard" width="440" /> |     |
 
 ## Quick demo (2 minutes)
 
@@ -160,16 +158,17 @@ graph TD
 
 ## Tech stack
 
-| Area      | Technology                                              |
-| --------- | ------------------------------------------------------- |
-| Framework | Next.js 14 (App Router), TypeScript                     |
-| Styling   | Tailwind CSS, Framer Motion                             |
-| Fonts     | Clash Display, JetBrains Mono                           |
-| Wallet    | Solana Wallet Adapter (Phantom, Solflare)               |
-| Data      | Supabase (profiles, leaderboard, match history)         |
-| Prices    | Pyth Network (planned)                                  |
-| Contracts | Anchor (Rust): Escrow, Matchmaker, Settlement (planned) |
-| Hosting   | Vercel                                                  |
+| Area            | Technology                                                              |
+| --------------- | ----------------------------------------------------------------------- |
+| Framework       | Next.js 14 (App Router), TypeScript                                     |
+| Styling         | Tailwind CSS, Framer Motion                                             |
+| Fonts           | Clash Display, JetBrains Mono                                           |
+| Wallet          | Solana Wallet Adapter (Phantom, Solflare)                               |
+| Real-time layer | MagicBlock Ephemeral Rollups, Private ER, VRF (integration in progress) |
+| Data            | Supabase (profiles, leaderboard, match history)                         |
+| Prices          | Pyth Network (planned)                                                  |
+| Contracts       | Anchor (Rust): Escrow, Matchmaker, Settlement (planned)                 |
+| Hosting         | Vercel                                                                  |
 
 **Features:** real-time 1v1 duels · VRF asset selection · hidden positions · zero-gas trading · instant settlement · ELO leaderboard · profiles & achievements · daily quests.
 
@@ -198,7 +197,7 @@ We're upfront about what's real today.
 **Requirements:** Node.js 18+, npm, Phantom wallet (Devnet).
 
 ```bash
-git clone https://github.com/yourusername/nixwat.git
+git clone https://github.com/changwrd/nixwat.git
 cd nixwat
 npm install
 npm run dev
@@ -255,12 +254,10 @@ Open `http://localhost:3000` and connect Phantom or Solflare on **Devnet**.
 
 ## License
 
-Released under the **MIT License**. See [`LICENSE`](LICENSE) for the full text.
+MIT. See [`LICENSE`](LICENSE).
 
-Copyright (c) 2026 Changwrd
+## Demo video
 
-You are free to use, copy, modify, merge, publish, distribute, sublicense and sell copies of this software, as long as the copyright notice and license text are included in all copies.
+[![Watch the demo](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://youtu.be/TX_dsoHEFao?si=mkriC4j8apkfTWvm)
 
-The software is provided "as is", without warranty of any kind. Nixwat is a Devnet prototype and has not been audited, so do not use it with real funds.
-
-**Third-party acknowledgements:** Next.js, Tailwind CSS, Framer Motion, Solana Wallet Adapter, Supabase, and MagicBlock are the property of their respective owners and are used under their own licenses.
+_(Nixwat is a 60-second, real-time trading duel on Solana. Two players stake SOL, MagicBlock's VRF selects a random asset, and they battle to achieve the highest P&L. Winner takes the pot. .)_
